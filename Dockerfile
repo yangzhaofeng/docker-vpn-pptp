@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM debian:stretch
 MAINTAINER Steven Yang <yangzhaofengsteven@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
