@@ -19,7 +19,7 @@ username    *           password    *
 To start VPN server as a docker container run:
 
 ````
-docker run -d --privileged -p 1723:1723 -v {local_path_to_chap_secrets}:/etc/ppp/chap-secrets mobtitude/vpn-pptp
+docker run -d --privileged -p 1723:1723 -v {local_path_to_etc}:/etc/ yangzhaofengsteven/docker-vpn-pptp
 ````
 
 Edit your local _chap-secrets_ file, to add or modify VPN users whenever you need.
@@ -41,7 +41,7 @@ It looked like Docker deamon didn't forward packets for GRE protocol to containe
 One of the possible solutions is to start container with networking mode set to host by adding param `--net=host` to run command:
 
 ````
-docker run -d --privileged --net=host -v {local_path_to_chap_secrets}:/etc/ppp/chap-secrets mobtitude/vpn-pptp
+docker run -d --privileged --net=host -v {local_path_to_etc}:/etc/ yangzhaofengsteven/docker-vpn-pptp
 ````
 
 **Note:** Before starting container in `--net=host` mode, please read how networking in `host` mode works in Docker:
