@@ -4,15 +4,20 @@ refuse-chap
 refuse-mschap
 require-mschap-v2
 require-mppe-128
-ms-dns 192.168.93.154
-ms-dns 202.38.93.153
+
+# Network and Routing
+ms-dns {{MS_DNS1}}
+ms-dns {{MS_DNS2}}
 proxyarp
 nodefaultroute
+
+# Logging
+# debug
+# dump
+
+# Miscellaneous
 lock
 nobsdcomp
 novj
 novjccomp
 nologfd
-plugin radius.so
-plugin radattr.so
-radius-config-file /etc/radiusclient/radiusclient.conf
