@@ -50,7 +50,7 @@ docker run -itd \
 -e MS_DNS1=8.8.8.8 \
 -e MS_DNS2=8.8.4.4 \
 -e LOCAL_SUBNET=10.250.80 \
-yangzhaofengsteven/docker-vpn-pptp
+yangzhaofengsteven/pptpd
 ````
 
 **Note:** Before starting container in `--net=host` mode, please read how networking in `host` mode works in Docker:
