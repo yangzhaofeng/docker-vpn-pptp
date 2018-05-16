@@ -41,7 +41,16 @@ It looked like Docker deamon didn't forward packets for GRE protocol to containe
 One of the possible solutions is to start container with networking mode set to host by adding param `--net=host` to run command:
 
 ````
-docker run -d --privileged --net=host -e PPP_USER=username -e PPP_PASS=pass yangzhaofengsteven/docker-vpn-pptp
+docker run -itd \
+--restart=always \
+--privileged \
+--net=host \
+-e PPP_USER=username \
+-e PPP_PASS=pass \
+-e MS_DNS1=8.8.8.8 \
+-e MS_DNS2=8.8.4.4 \
+-e LOCAL_SUBNET=10.250.80 \
+yangzhaofengsteven/docker-vpn-pptp
 ````
 
 **Note:** Before starting container in `--net=host` mode, please read how networking in `host` mode works in Docker:
