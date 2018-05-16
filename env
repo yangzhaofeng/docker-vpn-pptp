@@ -1,0 +1,2 @@
+PPP_USER=${PPP_USER:-"qb"}
+PPP_PASS=${PPP_PASS:-"magireco"}
