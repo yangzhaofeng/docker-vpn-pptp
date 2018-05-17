@@ -20,6 +20,10 @@ docker run -itd \
 yangzhaofengsteven/pptpd
 ````
 
+If you would like the vpn to access the Internet, please add nat rules:
+````
+iptables -t nat -A POSTROUTING -s {{LOCAL_SUBNET}}.0/24 ! -d {{LOCAL_SUBNET}}.0/24 -j MASQUERADE
+````
 
 ## Connecting to VPN service
 You can use any VPN (PPTP) client to connect to the service.
