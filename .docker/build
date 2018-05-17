@@ -1,0 +1,4 @@
+#!/bin/bash
+apt-get update && apt-get install -y pptpd iptables
+apt clean
+#rm /etc/pptpd.conf && rm -rf /etc/ppp/ && mkdir /etc/ppp/
